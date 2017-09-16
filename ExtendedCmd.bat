@@ -46,24 +46,19 @@ echo.
 @echo on
 @goto console
 :range
-@echo on
-set "SRangeC=Not Defined"
-set arg1=%1
-set arg2=%2
-set arg3=%3
-set startRANGE=%arg1%
-set endRANGE=%arg2%
-set input=%arg3%
+@echo off
+set "SRangeC"="Not Defined"
 pause
 if "%3" GEQ "%1" (
-	if "%3" LEQ "%2" (
-		set "SRangeC=1"
-		goto :eof
+	if "%1" GEQ "%2" (
+		set "SRangeC"="1"
+		goto console
 	)
-) 
+)
 if not "%3" GEQ "%1" (
-set "SRangeC=0"
+	pause
+	set "SRangeC=0"
 )
 echo %SRangeC%
 pause
-goto :console
+goto console
