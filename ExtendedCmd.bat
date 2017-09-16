@@ -48,8 +48,6 @@ echo.
 :range
 @echo on
 set "SRangeC=Not Defined"
-set startRANGE=0
-set endRANGE=10
 set arg1=%1
 set arg2=%2
 set arg3=%3
@@ -61,7 +59,6 @@ if "%3" GEQ "%1" (
 	if "%3" LEQ "%2" (
 		set "SRangeC=1"
 		goto :eof
-		
 	)
 ) 
 if not "%3" GEQ "%1" (
