@@ -1,4 +1,3 @@
-
 @title EXTENDED CMD (SEAL)
 @cls
 :console
@@ -11,7 +10,7 @@
 @set "SEALDETECT=%mainInput:~0,1%"
 @if "%SEALDETECT%"=="+" goto SealConsole
 %maininput%
-@pause
+
 @echo.
 @goto console
 :SealConsole
@@ -24,29 +23,31 @@ echo SEAL COMMAND DETECTED
 echo.
 echo.
 echo _____________________________________________________________________
-Echo.%1 | findstr /C:"%2">nul && (
-    call :range%%
-) || (
-    REM FALSE
-)
+if "%rangeInput%"=="+range" call :%mainInput%
 if "%mainInput%"=="+help" call :SealHelp
 if "%mainInput%"=="+excecute" call :excecute
+
+set "var=%mainInput%"
+set "search=range"
+CALL set "test=%%var:%search%=%%"
+if "%test%"=="%var%" (echo %search% is not in %var%) else call :%mainInput%
 
 endlocal
 goto SealConsole
 :SealHelp
-pause
 @echo off
 echo.
 echo All ExtendedCmd commands start with "+" (ex. "+help" displays the help menu specifically for EC)
 echo.
 echo.
 type sealhelp.txt
-pause
+
 echo.
 @echo on
 @goto console
 :range
+@echo on
+set "SRangeC=Not Defined"
 set startRANGE=0
 set endRANGE=10
 set arg1=%1
@@ -56,15 +57,16 @@ set startRANGE=%arg1%
 set endRANGE=%arg2%
 set input=%arg3%
 pause
-if "%input%" GEQ "%startRANGE%" (
-	if "%input%" LEQ "%endRANGE%" (
+if "%3" GEQ "%1" (
+	if "%3" LEQ "%2" (
 		set "SRangeC=1"
 		goto :eof
 		
 	)
 ) 
-if not "%input%" GEQ "%startRANGE%" (
+if not "%3" GEQ "%1" (
 set "SRangeC=0"
 )
 echo %SRangeC%
 pause
+goto :console
