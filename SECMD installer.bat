@@ -48,6 +48,10 @@ call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/ma
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/JigglyBits/range.bat range.bat JigglyBits
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/LoveLife/Version_News.txt Version_News.txt LoveLife
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/versioninfo.txt versioninfo.txt Resources\Shelf
+::Hello
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/JigglyBits/MathStuff.bat MathStuff.bat JigglyBits
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/JigglyBits/timeDifference.bat timeDifference.bat JigglyBits
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/help1.txt help1.txt Resources/Shelf
 @echo Cleaning up mess...
 @RD /s /q C:\SECMD\Interface\SECMD
 @echo Literally I have no idea why it puts these things in there...
