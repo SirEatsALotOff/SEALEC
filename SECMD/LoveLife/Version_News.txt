@@ -1,1 +1,7 @@
-Uhm added version news. Probably will only update this for actual version releases.
+10/8/17
+Added math and time difference utilities. Also added access to files via
+SECMD.bat. Next update will probably include more utilities. Also this will be
+one of the final commits before the big first release.
+See ya next time ladaroonies
+jesus christ remind me to delete that later
+~SirEatsALot

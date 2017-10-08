@@ -1,0 +1,37 @@
+			HELP MENU					
+_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_/~\_
+
+All normal CMD commands still work inside the cmd such
+as "help" "cls" and "echo !time!".
+Due to some weird error, variables cannot be the standard
+"%var%" but instead have to typed like !var!.
+All utilitues are meant to be called by seperate programs,
+and the extended CMD should not replace your general use
+with the CMD, as some things do not work in it. It is purely
+for user interface with configs and preferences, and some
+documentation.
+
+Didn't read any of that? Don't worry, neither did I!
+
++math <input>
+	Saves result of parameter as %ans%. EXAMPLE:
+	"call math.bat 69+21"
+	
++range <min> <max> <input>
+	Checks if input is within the parameters. Outputs "1" if
+	true, "0" if false. EXAMPLE: "call range.bat 1 10 5" returns
+	"1"
+	Variable is stored as "SRangeC"
+	
++versioninfo
+	Displays this versions info.
+	
++changelog
+	Displays most recent changes. May not change on each commit.
+
++td <Start Time> <End Time> <Format>
+	Calculates the distance between 2 times. Can be displayed in
+	standard (s), hourly (h), daily (d), or weekly times (w).
+	EXAMPLE: +td 12:00:00:00 24:00:00:00 h
+	outputs 12 hours
+	
