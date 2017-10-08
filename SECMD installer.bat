@@ -51,8 +51,10 @@ call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/ma
 ::Hello
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/JigglyBits/MathStuff.bat MathStuff.bat JigglyBits
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/JigglyBits/timeDifference.bat timeDifference.bat JigglyBits
-call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/help1.txt help1.txt Resources/Shelf
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/help1.txt help1.txt Resources\Shelf
 @echo Cleaning up mess...
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Sound/chime.bat chime.bat Resources\Sound
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Sound/startupsound.wav startupsound.wav Resources\Sound
 @RD /s /q C:\SECMD\Interface\SECMD
 @echo Literally I have no idea why it puts these things in there...
 @RD /s /q C:\SECMD\JigglyBits\SECMD
@@ -61,6 +63,7 @@ call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/ma
 @echo OK that is weird, mod folder doesn't have it...
 @echo Moving on...
 @RD /s /q C:\SECMD\Resources\Shelf\SECMD
+@RD /s /q C:\SECMD\Resources\Sound\SECMD
 ::%1 downoad link
 ::%2 Outfile
 ::%3 Copy Into
