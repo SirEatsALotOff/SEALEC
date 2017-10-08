@@ -1,4 +1,0 @@
-+help <command>			~	Displays the ExtendedCmd help menu. Parameter is optional.
-+excecute <filename>		~	Calls another batch file, or run a file AS a batch.
-+range <first> <last> <input>	~	Outputs '1' as true, '0' as false to variable '%SRangeC%'
-+encrypt <filename>		~	Encrypts a file, and saves the encrypted text as '<whatever>.ENCTXT'
