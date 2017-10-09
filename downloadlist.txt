@@ -1,3 +1,0 @@
-SECMD.bat
-https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Interface/SECMD.bat
-C:\SECMD\Interface
