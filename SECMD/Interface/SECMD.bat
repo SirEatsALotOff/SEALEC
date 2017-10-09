@@ -28,6 +28,9 @@ if "%SEALDETECT%"=="+range" goto range
 set "SEALDETECT=%maininputSEAL:~0,5%"
 if "%SEALDETECT%"=="+math" goto math
 if "%SEALDETECT%"=="+help" goto help
+set "SEALDETECT=%maininputSEAL:~0,9%"
+if "%SEALDETECT%"=="+settings" goto settings
+
 echo No Command Found
 goto start
 :range
@@ -54,3 +57,15 @@ type C:\SECMD\LoveLife\Version_News.txt
 echo.
 pause
 goto start
+:settings
+echo.
+call C:\SECMD\Resources\ForDevelopers\Formatting\linebreak.bat 12
+set "SEALDETECT2=%maininputSEAL:~10%"
+echo %SEALDETECT2%
+call :settingdetect %SEALDETECT2%
+goto start
+:settingdetect
+::write to preferences
+echo NOT FINISHED
+pause
+exit
