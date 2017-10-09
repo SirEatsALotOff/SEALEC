@@ -38,6 +38,8 @@ MKDIR C:\SECMD\Resources\Shelf
 MKDIR C:\SECMD\Resources\ForDevelopers
 MKDIR C:\SECMD\Mods
 echo.>"C:\SECMD\Mods\ModList.txt"
+MKDIR C:\SECMD\Mods\modHandler
+MKDIR C:\SECMD\Resources\ForDevelopers\TimeCapsule
 MKDIR C:\SECMD\Interface
 MKDIR C:\SECMD\JigglyBits
 @echo Righty then, that was the easy part. Hope this drive isn't a potato...
