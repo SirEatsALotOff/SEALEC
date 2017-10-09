@@ -55,6 +55,8 @@ call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/ma
 @echo Cleaning up mess...
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Sound/chime.bat chime.bat Resources\Sound
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Sound/startupsound.wav startupsound.wav Resources\Sound
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Interface/startupsound.bat startupsound.bat Interface
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Interface/autoinstaller.bat autoinstaller.bat Interface
 @RD /s /q C:\SECMD\Interface\SECMD
 @echo Literally I have no idea why it puts these things in there...
 @RD /s /q C:\SECMD\JigglyBits\SECMD
