@@ -1,6 +1,7 @@
 ::autoupdater
 @echo on
 echo Checking for updates...
+del C:\SECMD\Interface\versioninfo.txt
 set /p CurrentBuild=<versioninfo.txt
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/versioninfo.txt versioninfo.txt Interface
 set /p LatestBuild=<C:\SECMD\Interface\versioninfo.txt
@@ -8,12 +9,13 @@ if "%CurrentBuild%"=="%LatestBuild%" (
 @echo No New Version Detected
 goto :EOF
 )
+setlocal EnableDelayedExpansion
 @echo (Y/N)
 @set /p "DDDD=Download the most recent version?  "
-if "%DDDD%"==y call "C:\Users\%username%\Desktop\SECMD installer.bat"
-if "%DDDD%"==Y call "C:\Users\%username%\Desktop\SECMD installer.bat"
-if "%DDDD%"==n goto :EOF
-if "%DDDD%"==N goto :EOF
+if "%DDDD%"=="y" goto update
+if "%DDDD%"=="Y" goto update
+if "%DDDD%"=="n" goto :EOF
+if "%DDDD%"=="N" goto :EOF
 @echo Error...?
 pause
 exit
@@ -24,3 +26,6 @@ powershell -Command "Invoke-WebRequest %1 -OutFile %2"
 xcopy /s "C:\Users\%username%\Desktop\%2" "C:\SECMD\%3"
 del C:\Users\%username%\Desktop\%2
 goto :EOF
+:update
+cls
+@call C:\Users\%username%\Desktop\SECMD_installer.bat
