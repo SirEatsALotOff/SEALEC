@@ -6,8 +6,8 @@ del C:\SECMD\Interface\versioninfo.txt
 set /p CurrentBuild=<C:\SECMD\Resources\Shelf\versioninfo.txt
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/versioninfo.txt versioninfo.txt Interface
 set /p LatestBuild=<C:\SECMD\Interface\versioninfo.txt
-call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD_installer.bat SECMD_installer.bat Users\%username%\Desktop
-
+call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD_installer.bat SECMD_installer.bat Interface
+xcopy /s "C:\SECMD\Interface\SECMD_installer.bat" "C:\Users\%username%\Desktop"
 if "%CurrentBuild%"=="%LatestBuild%" (
 @echo No New Version Detected
 goto :EOF
