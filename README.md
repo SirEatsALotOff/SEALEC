@@ -4,4 +4,4 @@ SECMD (SEAL Extended CMD) is designed to expand the usefulness and ease of batch
 
 ## FEATURES
 
-Just ripped out the entire thing, I'll update this at some point.
+Check out the WIKI, I'm honestly too busy to add things here.
