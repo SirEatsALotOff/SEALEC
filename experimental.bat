@@ -19,18 +19,20 @@ for /l %%x in (1,1,%NumLines%) do echo %%x is !Line_%%x!
 
 pause
 set /a "NumericalI=%NumLines%/3"
+set /a "NumericalO=%NumericalI%
 :loop
 call :downloadandcopy %Line_2% %Line_1% %Line_3%
-set /a "NumericalO=%NumericalI%-1
-if %NumericalI%==0 goto end
+set /a "NumericalO=%NumericalO%-1
+if %NumericalO%==0 goto end
 goto loop
 :end
 echo GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 pause
+
 :downloadandcopy
 	@echo DOWNLOADING CONTENT...
 	powershell -Command "(New-Object Net.WebClient).DownloadFile('%1', '%2')"
 	powershell -Command "Invoke-WebRequest %1 -OutFile %2"
-	xcopy /s "C:\Users\%username%\Desktop\%2" "C:\SECMD\%3"
-	del C:\%2
+	xcopy /s "C:\Users\%username%\Desktop\%2" "%3"
+
 goto :EOF
