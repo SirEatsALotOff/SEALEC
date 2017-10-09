@@ -1,4 +1,4 @@
-::FOR %x IN (*.bat) DO call "%x"
+::FOR %x IN (C:\SECMD\Mods\*.bat) DO call "%x"
 call autoinstaller.bat
 @echo off
 call C:\SECMD\Interface\startupsound.bat

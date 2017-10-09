@@ -1,10 +1,12 @@
 ::autoupdater
 @echo on
+setlocal EnableDelayedExpansion
 echo Checking for updates...
 del C:\SECMD\Interface\versioninfo.txt
-set /p CurrentBuild=<versioninfo.txt
+set /p CurrentBuild=<C:\SECMD\Resources\Shelf\versioninfo.txt
 call :downloadandcopy https://raw.githubusercontent.com/SirEatsALotOff/SEALEC/master/SECMD/Resources/Shelf/versioninfo.txt versioninfo.txt Interface
 set /p LatestBuild=<C:\SECMD\Interface\versioninfo.txt
+
 if "%CurrentBuild%"=="%LatestBuild%" (
 @echo No New Version Detected
 goto :EOF
