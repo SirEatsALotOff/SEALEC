@@ -1,4 +1,7 @@
+::FOR %x IN (*.bat) DO call "%x"
+call autoinstaller.bat
 @echo off
+call C:\SECMD\Interface\startupsound.bat
 title Extended Cmd
 set "startuptime=%time%and%date%"
 echo %startuptime%>C:\SECMD\LoveLife\startuplog.txt
